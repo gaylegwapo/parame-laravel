@@ -59,9 +59,13 @@
           <li><a href="#team">Team</a></li>
           </li>
           <li><a href="#contact">Contact</a></li>
+          <a href="#"  onclick='event.preventDefault(); document.getElementById("logout-form").submit();'>Logout</a>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+      <form action="{{ route('logout') }}" method='POST' id="logout-form">
+                @csrf
+                </form>
 
       <a class="btn-getstarted" href="#about">Get Started</a>
 
@@ -80,7 +84,7 @@
               </div>
 
               <div class="main-heading">
-                <h1>WELCOME TO<br>FASHION STRORE</h1>
+                <h1>WELCOME TO<br>FASHION STORE</h1>
               </div>
 
               <div class="divider"></div>
